@@ -1,19 +1,11 @@
 import React from 'react'
 
-function Filter({
-  sortBy,
-  onChangeSortBy,
-  showGreased,
-  onChangeShowGreased
-}) {
+function Filter({showGreased, handleGreased}) {
 
-  function handleChangeSortBy(event) {
-    onChangeSortBy(event.target.value)
-  }
-  
-  function handleToggleGreased(event) {
-    onChangeShowGreased(event.target.checked)
-  }
+    function handleToggleGreased(e) {
+        handleGreased(e.target.checked)
+
+    };
 
 	return (
 		<div className="filterWrapper">
@@ -25,8 +17,8 @@ function Filter({
 					<select
 						className="ui selection dropdown"
 						name="sort"
-						onChange={handleChangeSortBy}
-						value={sortBy}
+						onChange=""
+						value=""
           >
 						<option value="name">Name</option>
 						<option value="weight">Weight</option>

@@ -1,16 +1,15 @@
 import React from 'react'
 
-function HogDetails() {
+function HogDetails({hog}) {
  
   return (
     <div className="description">
-      <strong>GREASED</strong>
+      <strong>{hog.greased ? "Greased" : "Ungreased"}</strong>
       <p>
-        Highest medal achived: <strong>MEDAL</strong>
+        Highest medal achived: <strong>{hog["highest medal achieved"]}</strong>
       </p>
       <p>
-        Weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator
-        with Thru-the-Door Ice and Water: <strong>WEIGHT</strong>
+        These are extra mini Hogs and are in pounds: <strong>{hog.weight}</strong>
       </p>
     </div>
   )
