@@ -8,6 +8,7 @@ function PigContainer({ hogs }) {
     const [checked, setChecked] = useState(false);
     //console.log(checked)
     //console.log(hogs)
+    const [sortBy, setSortBy] = useState(false)
     const greasedFilteredHogs = hogs.filter((hog) => 
     checked ? checked === hog.greased : true)
 
@@ -17,7 +18,7 @@ function PigContainer({ hogs }) {
 
     return(
         <main>
-            <FilteredHogs checked={checked} setChecked={setChecked}/>
+            <FilteredHogs checked={checked} setChecked={setChecked} sortBy={sortBy} setSortBy={setSortBy}/>
             {renderHogCards}
            
         </main>
