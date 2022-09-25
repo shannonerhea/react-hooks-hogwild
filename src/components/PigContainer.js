@@ -8,7 +8,9 @@ function PigContainer({hogs}) {
 
     return(
         <main>
+            <FilteredHogs />
             {renderHogCards}
+           
         </main>
     )
 };
