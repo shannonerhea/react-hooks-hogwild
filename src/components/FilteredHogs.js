@@ -17,6 +17,8 @@ function FilteredHogs({checked, setChecked}) {
             onChange={handleGreasedChange}
             checked={checked}
             />
+            <label htmlFor="name">Name</label>
+            <input type="radio" name="name" id="name" />
         </div>
     )
 };
