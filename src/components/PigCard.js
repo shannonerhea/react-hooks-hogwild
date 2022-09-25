@@ -28,4 +28,4 @@ function PigCard({
 
 export default PigCard;
 // readme says put name in <h3> and <iimg/>
-//className for styling
+//className for styling pigTile in css file etc
