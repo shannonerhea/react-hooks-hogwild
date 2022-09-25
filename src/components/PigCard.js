@@ -1,4 +1,5 @@
 import { useState } from "react"
+import PigDetails from "./PigDetails"
 
 // highest medal ach. is a str in the data so set str to value in line 1
 function PigCard({ 
@@ -21,7 +22,7 @@ function PigCard({
         <article className="pigTile" onClick={handleClick}>
             <h3>{name}</h3>
             <img src={image} alt={name} className="minPigTile" />
-            { showDetails ? <p> this pig was clicked on </p> : null  }
+            { showDetails ? <PigDetails greased={greased} specialty={specialty}  weight={ weight} highestMedalAchieved={highestMedalAchieved} /> : null  }
             {/* { showDetails && <p> this pig was clicked on </p> }*/}
         </article>
     )

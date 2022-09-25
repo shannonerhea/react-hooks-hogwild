@@ -1,4 +1,5 @@
 import PigCard from "./PigCard"
+import FilteredHogs from "./FilteredHogs"
 
 
 function PigContainer({hogs}) {
