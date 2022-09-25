@@ -22,6 +22,7 @@ function PigCard({
             <h3>{name}</h3>
             <img src={image} alt={name} className="minPigTile" />
             { showDetails ? <p> this pig was clicked on </p> : null  }
+            {/* { showDetails && <p> this pig was clicked on </p> }*/}
         </article>
     )
 };
