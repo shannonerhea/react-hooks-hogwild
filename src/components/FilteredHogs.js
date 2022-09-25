@@ -1,9 +1,5 @@
-import { useState } from "react";
 
-
-function FilteredHogs() { 
-    
-    const [checked, setChecked] = useState(false);
+function FilteredHogs({checked, setChecked}) { 
 
     function handleGreasedChange() {
         //console.log("changed")
