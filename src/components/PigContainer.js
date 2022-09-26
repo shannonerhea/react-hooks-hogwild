@@ -16,20 +16,21 @@ function PigContainer({ hogs }) {
     function sortHogs() {
         if (sortBy === " name") {
             const sortByName = [...greasedFilteredHogs].sort((hog1, hog2) => 
-    hog1.name.toLowerCase().localeCompare(hog2.name.toLowerCase())
+            hog1.name.toLowerCase().localeCompare(hog2.name.toLowerCase())
     );
             return sortByName
         } else if (sortBy === "weight" ) {
             const sortByWeight = [...greasedFilteredHogs].sort((hog1, hog2) => hog1.weight - hog2.weight
             );
             return sortByWeight;
-
+        } else {
+            return greasedFilteredHogs;
         }
     };
  
 
 
-    const renderHogCards = greasedFilteredHogs.map((hog) => (
+    const renderHogCards = sortHogs().map((hog) => (
     <PigCard key={hog.name} {...hog} />))
 
     return(
